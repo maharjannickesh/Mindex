@@ -1,0 +1,64 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Mindex",
+		"_postman_id": "aa3330dd-2709-1136-372e-1b5203db495e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetEmployee",
+			"request": {
+				"url": "http://localhost:8080/employee/16a596ae-edd3-4847-99fe-c4518e82c86f",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCompensation",
+			"request": {
+				"url": "http://localhost:8080/compensation",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"employee\":  { \"employeeId\": \"16a596ae-edd3-4847-99fe-c4518e82c86f\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Lennon\",\n    \"position\": \"Development Manager\",\n    \"department\": \"Engineering\",\n    \"directReports\": [\n        {\n            \"employeeId\": \"b7839309-3348-463b-a7e3-5de1c168beb3\",\n            \"firstName\": null,\n            \"lastName\": null,\n            \"position\": null,\n            \"department\": null,\n            \"directReports\": null\n        },\n        {\n            \"employeeId\": \"03aa1462-ffa9-4978-901b-7c001562cf6f\",\n            \"firstName\": null,\n            \"lastName\": null,\n            \"position\": null,\n            \"department\": null,\n            \"directReports\": null\n        }\n    ]},\n    \"salary\": 50000,\n    \"effectiveDate\" : \"2022-06-01\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployeeCompensation",
+			"request": {
+				"url": "http://localhost:8080/compensation/16a596ae-edd3-4847-99fe-c4518e82c86f",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetDirectReporting",
+			"request": {
+				"url": "http://localhost:8080/employee/16a596ae-edd3-4847-99fe-c4518e82c86f/reports",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
